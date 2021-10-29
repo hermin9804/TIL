@@ -95,7 +95,29 @@ class Date
 		}
 };
 
-int main(void)
+int main() 
+{
+  Date day;
+  day.set_date(2011, 3, 1);
+  day.show_date();
+
+  day.add_day(30);
+  day.show_date();
+
+  day.add_day(2000);
+  day.show_date();
+
+  day.set_date(2012, 1, 31);  // 윤년
+  day.add_day(29);
+  day.show_date();
+
+  day.set_date(2012, 8, 4);
+  day.add_day(2500);
+  day.show_date();
+  return 0;
+}
+
+/*int main(void)
 {
 	Date date;
 	date.set_date(2000, 2, 29);
@@ -105,4 +127,4 @@ int main(void)
 
 	date.show_date();
 	return (0);
-}
+}*/
