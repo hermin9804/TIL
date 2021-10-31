@@ -1,50 +1,60 @@
 #include <iostream>
 #include <string>
 
-class PhotonCannon
+class Photon_Cannon
 {
 	int hp, shield;
 	int coord_x, coord_y;
 	int damage;
 
+	char *name;
+
 	public:
-		PhotonCannon(int x, int y);
-		PhotonCannon(const PhotonCannon& pc);
+		Photon_Cannon(int x, int y);
+		Photon_Cannon(int x, int y, const char *cannon_name);
+		~Photon_Cannon();
 
 		void show_status();
 };
 
-PhotonCannon::PhotonCannon(const PhotonCannon& pc)
+Photon_Cannon::Photon_Cannon(int x, int y)
 {
-	std::cout << "복사 생성자 호출 !" << std::endl;
-	hp = pc.hp;
-	shield = pc.shield;
-	coord_x = pc.coord_x;
-	coord_y = pc.coord_y;
-	damage = pc.damage;
-}
-
-PhotonCannon::PhotonCannon(int x, int y)
-{
-	std::cout << "생성자 호출 !" << std::endl;
 	hp = shield = 100;
 	coord_x = x;
 	coord_y = y;
 	damage = 20;
+
+	name = NULL;
 }
 
-void PhotonCannon::show_status()
+Photon_Cannon::Photon_Cannon(int x, int y, const char *cannon_name)
 {
-	std::cout << "Photon Cannon " << std::endl;
+	hp = shield = 100;
+	coord_x = x;
+	coord_y = y;
+	damage = 20;
+
+	name = new char[strlen(cannon_name) + 1];
+	strcpy(name, cannon_name);
+}
+
+Photon_Cannon::~Photon_Cannon()
+{
+	if (name)
+		delete[] name;
+}
+
+void Photon_Cannon::show_status()
+{
+	std::cout << "Photon Cannon :: " << name << std::endl;
 	std::cout << " Location : ( " << coord_x << " , " << coord_y << " ) " << std::endl;
 	std::cout << " HP : " << hp << std::endl;
 }
 
 int main(void)
 {
-	PhotonCannon pc1(3, 3);
-	PhotonCannon pc2(pc1);
-	PhotonCannon pc3 = pc2;
+	Photon_Cannon pc1(3, 3, "Cannon");
+	Photon_Cannon pc2 = pc1;
 
 	pc1.show_status();
 	pc2.show_status();
