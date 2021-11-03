@@ -12,6 +12,7 @@ class Photon_Cannon
 	public:
 		Photon_Cannon(int x, int y);
 		Photon_Cannon(int x, int y, const char *cannon_name);
+		Photon_Cannon(const Photon_Cannon &pc);
 		~Photon_Cannon();
 
 		void show_status();
@@ -25,6 +26,19 @@ Photon_Cannon::Photon_Cannon(int x, int y)
 	damage = 20;
 
 	name = NULL;
+}
+
+Photon_Cannon::Photon_Cannon(const Photon_Cannon &pc)
+{
+	std::cout << "복사 생성자 호출! " << std::endl;
+	hp = pc.hp;
+	shield = pc.shield;
+	coord_x = pc.coord_x;
+	coord_y = pc.coord_y;
+	damage = pc.damage;
+
+	name = new char[strlen(pc.name) + 1];
+	strcpy(name, pc.name);
 }
 
 Photon_Cannon::Photon_Cannon(int x, int y, const char *cannon_name)
