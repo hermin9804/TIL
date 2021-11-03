@@ -111,4 +111,8 @@ int main(void)
 
 	s3.copy_string(s1);
 	s3.show_status();
+
+	std::cout << s1.strlen() << std::endl;
+	
+	return (0);
 }
