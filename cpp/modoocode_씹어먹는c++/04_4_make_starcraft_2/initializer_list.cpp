@@ -16,7 +16,7 @@ class Marine
 		Marine(int x, int y);
 		Marine(int x, int y, int default_damage);
 
-		int attack();
+		int attack() const;
 		Marine& be_attacked(int damage_earn);
 		void move(int x, int y);
 
@@ -55,7 +55,7 @@ void Marine::move(int x, int y)
 	coord_y = y;
 }
 
-int Marine::attack() { return default_damage; }
+int Marine::attack() const { return default_damage; }
 
 Marine& Marine::be_attacked(int damage_earn)
 {
