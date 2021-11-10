@@ -10,38 +10,43 @@ int strlen(char *str)
 
 class MyString
 {
-	char *string_content;
-	int string_length;
+	char *string_content;	// 문자열 데이터를 가리키는 포인터
+	int string_length;	// 문자열 길이
+	int memory_capacity;	// 현재 할당된 용량
 
 	public:
-		MyString(char c);
-		MyString(const char *str);
-		MyString(const MyString &str);
+		MyString(char c);		// 문자 하나로 생성
+		MyString(const char *str);	// 문자열로 부터 생성
+		MyString(const MyString &str);	// 복사생성자
 
 		~MyString();
 
 		int length() const;
+		int capacity() const;
+		void reserve(int size);
+		char at(int i) const;
 
 		void print() const;
 		void println() const;
 
-		/*void add_string(const string &s);
-		void copy_string(const string &s);
-		int strlen();
-
-		void show_status();*/
+		MyString& assign(const MyString& str);
+		MyString& assign(const char* str);
 };
 
 MyString::MyString(char c)
 {
 	string_content = new char[1];
 	string_content[0] = c;
+	memory_capacity = 1;
+	string_length = 1;
 }
 
 MyString::MyString(const char *str)
 {
 	string_length = strlen(str);
+	memory_capacity = string_length;
 	string_content = new char[string_length];
+
 	for (int i = 0; i != string_length; i++)
 		string_content[i] = str[i];
 }
@@ -49,6 +54,7 @@ MyString::MyString(const char *str)
 MyString::MyString(const MyString &str)
 {
 	string_length = str.string_length;
+	memory_capacity = str.string_length;
 	string_content = new char[string_length];
 
 	for (int i = 0; i <= string_length; i++)
@@ -56,7 +62,6 @@ MyString::MyString(const MyString &str)
 }
 
 MyString::~MyString() { delete[] string_content; }
-
 int MyString::length() const { return string_length; }
 
 void MyString::print() const {
@@ -67,52 +72,78 @@ void MyString::print() const {
 void MyString::println() const {
 	for (int i = 0; i != string_length; i++)
 		std::cout << string_content[i];
-
 	std::cout << std::endl;
 }
 
-/*void string::add_string(const string &s)
+MyString& MyString::assign(const MyString& str)
 {
-	char *tmp = str;
-	str = new char[len + s.len + 1];
-	int i = 0;
-	for (i = 0; tmp[i]; i++)
-		str[i] = tmp[i];
-	for (int j = 0; j <= s.len; j++)
+	if (str.string_length > memory_capacity)
 	{
-		str[i] = s.str[j];
-		i++;
+		delete[] string_content;
+
+		string_content = new char[str.string_length];
+		memory_capacity = str.string_length;
 	}
-	len += s.len;
+	for (int i = 0; i != str.string_length; i++)
+		string_content[i] = str.string_content[i];
+
+	string_length = str.string_length;
+
+	return *this;
 }
 
-void string::copy_string(const string &s)
+MyString& MyString::assign(const char* str)
 {
-	len = s.len;
+	int str_length = strlen(str);
+	if (str_length >memory_capacity)
+	{
+		delete[] string_content;
 
-	str = new char[len + 1];
-	for (int i = 0; i <= len; i++)
-		str[i] = s.str[i];
+		string_content = new char[str_length];
+		memory_capacity = str_length;
+	}
+	for (int i = 0; i != str_length; i++)
+		string_content[i] = str[i];
+
+	string_length = str_length;
+
+	return *this;
 }
 
-int string::strlen()
+int MyString::capacity() const { return memory_capacity; }
+void MyString::reserve(int size)
 {
-	return (len);
+	if (size > memory_capacity)
+	{
+		char* prev_string_content = string_content;
+
+		string_content = new char[size];
+		memory_capacity = size;
+		
+		for (int i = 0; i != string_length; i++)
+			string_content[i] = prev_string_content[i];
+
+		delete[] prev_string_content;
+	}
 }
 
-void string::show_status()
+char MyString::at(int i) const
 {
-	std::cout << "str : " << str << std::endl;
-	std::cout << "len : " << len << std::endl;
-}*/
+	if (i >= string_length || i < 0)
+		return ('\0');
+	else
+		return string_content[i];
+}
 
 int main(void)
 {
-	MyString str1("hello world");
-	MyString str2(str1);
+	MyString str1("very very very long string");
+	str1.reserve(30);
 
+	std::cout << "Capacity : " << str1.capacity() << std::endl;
+	std::cout << "String length : " << str1.length() << std::endl;
+	std::cout << "string_content[0] : " << str1.at(0) << std::endl;
 	str1.println();
-	str2.println();
 
 	return (0);
 }
