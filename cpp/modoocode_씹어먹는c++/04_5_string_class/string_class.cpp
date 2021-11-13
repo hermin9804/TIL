@@ -36,6 +36,8 @@ class MyString
 		MyString& insert(int loc, const MyString& str);
 		MyString& insert(int loc, const char* str);
 		MyString& insert(int loc, char c);
+
+		MyString& erase(int loc, int num);
 };
 
 MyString::MyString(char c)
@@ -193,6 +195,17 @@ MyString& MyString::insert(int loc, char c)
 	return insert(loc, temp);
 }
 
+MyString& MyString::erase(int loc, int num)
+{
+	if (num < 0 || loc < 0 || loc + num > string_length || loc > string_length) return *this;
+
+	for (int i = loc + num; i < string_length; i++)
+		string_content[i - num] = string_content[i];
+	
+	string_length -= num;
+	return *this;
+}
+
 int main(void)
 {
 	MyString str1("very long string");
@@ -209,6 +222,10 @@ int main(void)
 	std::cout << "Capacity : " << str1.capacity() << std::endl;
 	std::cout << "String length : " << str1.length() << std::endl;
 	str1.println();
+
+	str1.erase(0, 3);
+	str1.println();
+
 	return (0);
 }
 
