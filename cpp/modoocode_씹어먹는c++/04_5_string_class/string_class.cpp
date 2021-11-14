@@ -38,6 +38,10 @@ class MyString
 		MyString& insert(int loc, char c);
 
 		MyString& erase(int loc, int num);
+		
+		int find(int find_from, MyString& str) const;
+		int find(int find_from, const char* str) const;
+		int find(int find_from, char c) const;
 };
 
 MyString::MyString(char c)
@@ -206,26 +210,42 @@ MyString& MyString::erase(int loc, int num)
 	return *this;
 }
 
-int main(void)
+int MyString::find(int find_from, MyString& str) const 
 {
-	MyString str1("very long string");
-	MyString str2("<some string inserted between>");
-	str1.reserve(30);
-
-	std::cout << "Capacity : " << str1.capacity() << std::endl;
-	std::cout << "String length : " << str1.length() << std::endl;
-	str1.println();
-
-	str1.insert(5, str2);
-	str1.println();
-
-	std::cout << "Capacity : " << str1.capacity() << std::endl;
-	std::cout << "String length : " << str1.length() << std::endl;
-	str1.println();
-
-	str1.erase(0, 3);
-	str1.println();
-
-	return (0);
+	int i, j;
+	if (str.string_length == 0) 
+		return -1;
+	for (i = find_from; i <= string_length - str.string_length; i++)
+	{
+		for (j = 0; j < str.string_length; j++)
+		{
+			if (string_content[i + j] != str.string_content[j])
+				break;
+		}
+		if (j == str.string_length)
+			return i;
+	}
+	return -1;
 }
 
+int MyString::find(int find_from, const char* str) const
+{
+	MyString temp(str);
+	return find(find_from, temp);
+}
+
+int MyString::find(int find_from, char c) const
+{
+	MyString temp(c);
+	return find(find_from, temp);
+}
+
+int main(void)
+{
+	MyString str1("this is a very very long string");
+  	std::cout << "Location of first <very> in the string : " 
+		<< str1.find(0, "very") << std::endl;
+	std::cout << "Location of second <very> in the string : "
+		<< str1.find(str1.find(0, "very") + 1, "very") << std::endl;
+	return (0);
+}
