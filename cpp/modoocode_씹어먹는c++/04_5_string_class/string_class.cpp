@@ -8,11 +8,30 @@ int strlen(char *str)
 	return (len);
 }
 
+int *make_table(char *str, int string_length)
+{
+	int	*table = new int[string_length];
+	int	i = 0;
+	int	j = -1;
+
+	table[0] = -1;
+	while (i < string_length)
+	{
+		while (j > -1 && str[i] != str[j])
+			j = table[j];
+		i++;
+		j++;
+		table[i] = j;
+	}
+	return table;
+}
+
 class MyString
 {
 	char *string_content;	// 문자열 데이터를 가리키는 포인터
 	int string_length;	// 문자열 길이
 	int memory_capacity;	// 현재 할당된 용량
+	int *table;		// 접두사 / 접미사 반복 테이블
 
 	public:
 		MyString(char c);		// 문자 하나로 생성
@@ -43,6 +62,10 @@ class MyString
 		int find(int find_from, const char* str) const;
 		int find(int find_from, char c) const;
 
+		int kmp_find(int find_from, MyString& str) const; 
+		int kmp_find(int find_from, const char* str) const;
+		int kmp_find(int find_from, char c) const;
+
 		int compare(const MyString& str) const;
 };
 
@@ -52,6 +75,7 @@ MyString::MyString(char c)
 	string_content[0] = c;
 	memory_capacity = 1;
 	string_length = 1;
+	table = make_table(string_content, string_length);
 }
 
 MyString::MyString(const char *str)
@@ -62,6 +86,7 @@ MyString::MyString(const char *str)
 
 	for (int i = 0; i != string_length; i++)
 		string_content[i] = str[i];
+	table = make_table(string_content, string_length);
 }
 
 MyString::MyString(const MyString &str)
@@ -72,9 +97,14 @@ MyString::MyString(const MyString &str)
 
 	for (int i = 0; i <= string_length; i++)
 		string_content[i] = str.string_content[i];
+	table = make_table(string_content, string_length);
 }
 
-MyString::~MyString() { delete[] string_content; }
+MyString::~MyString()
+{ 
+	delete[] string_content; 
+	delete[] table; 
+}
 int MyString::length() const { return string_length; }
 
 void MyString::print() const {
@@ -242,6 +272,39 @@ int MyString::find(int find_from, char c) const
 	return find(find_from, temp);
 }
 
+int MyString::kmp_find(int find_from, MyString& str) const
+{
+	int	i  = find_from;
+	int	j = 0;
+	int	position = - 1;
+
+	while (i < string_length)
+	{
+		while (j >= 0 && string_content[i] != str.string_content[j])
+			j = str.table[j];
+		i++;
+		j++;
+		if (j == str.string_length)
+		{
+			position = i - j;
+			break ;
+		}
+	}
+	return position;
+}
+
+int MyString::kmp_find(int find_from, const char* str) const
+{
+	MyString temp(str);
+	return kmp_find(find_from, temp);
+}
+
+int MyString::kmp_find(int find_from, char c) const
+{
+	MyString temp(c);
+	return kmp_find(find_from, temp);
+}
+
 int MyString::compare(const MyString& str) const
 {
 	for (int i = 0; i < std::min(string_length, str.string_length); i++)
@@ -260,10 +323,11 @@ int MyString::compare(const MyString& str) const
 
 int main(void)
 {
-	MyString str1("abcdef");
-	MyString str2("abcde");
+	MyString str1("aaabtaaabc");
+	char c = 't';
 	
-	std::cout << "str1 and str2 compare : " << str1.compare(str2) << std::endl;
-	std::cout << "str1 and str2 compare : " << str1.compare(str2) << std::endl;
+	std::cout << "position: " << str1.find(0, c) << std::endl;
+	std::cout << "position: " << str1.kmp_find(0, c) << std::endl;
+
 	return (0);
 }
