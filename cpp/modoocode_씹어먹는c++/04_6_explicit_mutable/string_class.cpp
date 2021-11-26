@@ -53,4 +53,9 @@ MyString::~MyString() { delete[] string_content; }
 
 int MyString::length() const { return string_length; }
 
-int main() { MyString s(3); }
+int main() 
+{ 
+	MyString s1(3); 
+	MyString s2(4); 
+	return (0);
+}
