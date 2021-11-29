@@ -9,15 +9,17 @@ class MyString
 
 	public:
 
-	MyString(int capacity);
+		explicit MyString(int capacity);
 
-	MyString(const char* str);
+		MyString(int capacity);
 
-	MyString(const MyString& str);
+		MyString(const char* str);
 
-	~MyString();
+		MyString(const MyString& str);
 
-	int length() const;
+		~MyString();
+
+		int length() const;
 };
 
 MyString::MyString(int capacity)
