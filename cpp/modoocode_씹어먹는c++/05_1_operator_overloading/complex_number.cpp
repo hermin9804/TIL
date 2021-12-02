@@ -14,6 +14,11 @@ class Complex
 		Complex operator*(const Complex& c) const;
 		Complex operator/(const Complex& c) const;
 
+		Complex& operator+=(const Complex& c);
+		Complex& operator-=(const Complex& c);
+		Complex& operator*=(const Complex& c);
+		Complex& operator/=(const Complex& c);
+
 		void println() 
 		{ std:: cout << "( " << real << " , " << img << " ) " << std::endl; }
 };
@@ -40,13 +45,33 @@ Complex Complex::operator/(const Complex& c) const {
 	return temp;
 }
 
+Complex& Complex::operator+=(const Complex& c) {
+	(*this) = (*this) + c;
+	return *this;
+}
+
+Complex& Complex::operator-=(const Complex& c) {
+	(*this) = (*this) - c;
+	return *this;
+}
+
+Complex& Complex::operator*=(const Complex& c) {
+	(*this) = (*this) * c;
+	return *this;
+}
+
+Complex& Complex::operator/=(const Complex& c) {
+	(*this) = (*this) / c;
+	return *this;
+}
 int main()
 {
 	Complex a(1.0, 2.0);
 	Complex b(3.0, -2.0);
 
-	Complex c = a * b;
-	
-	c.println();
+	a += b;
+
+	a.println();
+	b.println();
 	return (0);
 }
