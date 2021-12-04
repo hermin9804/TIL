@@ -193,5 +193,7 @@ int main() {
 	a.println();
 	a = a / "-12+i55";
 	a.println();
+	a = a / "-10+i22";
+	a.println();
 	return (0);
 }
