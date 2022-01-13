@@ -24,8 +24,20 @@ class  RecipeDetail extends StatelessWidget {
 						style: const TextStyle(
 							fontSize: 20.0,
 							fontWeight: FontWeight.w700,
-							fontFamily: 'palatino'),
-					)
+							fontFamily: 'palatino'
+						),
+					),
+					Expanded(
+						child: ListView.builder(
+							shrinkWrap: true,
+							padding: const EdgeInsets.all(8),
+							itemBuilder: (context, index) {
+								Ingredient ingredient = recipe.ingredients[index];
+								return Text('${ingredient.quantity} ${ingredient.measure} ${ingredient.name}');
+							},
+							itemCount: recipe.ingredients.length,
+						)
+					),
 				],
 			),
 		);

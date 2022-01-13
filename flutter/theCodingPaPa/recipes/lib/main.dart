@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.orange,
       ),
       home: MyHomePage(),
     );
@@ -38,7 +38,9 @@ class  MyHomePage extends StatelessWidget {
 							Navigator.of(context)
 								.push(MaterialPageRoute(builder: (context) {
 								// TODO: return with return RecipeDetail()
-								return RecipeDetail(recipe: recipes[index],);
+								return RecipeDetail(
+									recipe: recipes[index],
+								);
 							}));
 						},
 						child: BuildRecipeCard(recipes[index]));
