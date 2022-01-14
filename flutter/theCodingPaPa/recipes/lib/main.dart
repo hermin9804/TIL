@@ -71,9 +71,7 @@ class  MyHomePage extends StatelessWidget {
 						)
 					],
 				),
-
 			),
-
 		);
 	}
 }
