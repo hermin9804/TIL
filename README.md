@@ -11,7 +11,7 @@ CS
 Language
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
-|00|[모두의 코드 - 씹어먹는 c++ 강좌](https://modoocode.com/134)|잠깐중단|[github]((https://github.com/hermin9804/TIL/tree/main/cpp/modoocode_%EC%94%B9%EC%96%B4%EB%A8%B9%EB%8A%94c%2B%2B))|
+|00|[모두의 코드 - 씹어먹는 c++ 강좌](https://modoocode.com/134)|잠깐중단|[github](https://github.com/hermin9804/TIL/tree/main/cpp/modoocode_%EC%94%B9%EC%96%B4%EB%A8%B9%EB%8A%94c%2B%2B)|
 
 Web
 |Order|------- What I Learning -------|Status|Details|
