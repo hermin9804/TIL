@@ -4,7 +4,10 @@ Today I Learned
 CS
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
-|00|[컴맹을위한 go언어 1 ~ 6강](https://www.youtube.com/watch?v=Tq3W8UyltFs&list=PLy-g2fnSzUTAaDcLW7hpq0e8Jlt7Zfgd6)|[진행중]()|[notion]()|
+|00|[컴맹을위한 go언어 1 ~ 6강](https://www.youtube.com/watch?v=Tq3W8UyltFs&list=PLy-g2fnSzUTAaDcLW7hpq0e8Jlt7Zfgd6)|진행중|[notion]()|
+|01|[반효경 - 운영체제 (책 + 강의)](http://www.kocw.net/home/cview.do?cid=3646706b4347ef09)|예정|[notion]()|
+|02|[김주균 - OS Oh Yes (책)](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788993712476)|예정|[notion]()|
+
 
 Language
 |Order|------- What I Learning -------|Status|Details|
