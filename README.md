@@ -16,7 +16,7 @@ Language
 Web
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
-|00|[생활코딩 - WEB1](https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb)|[](https://github.com/hermin9804/TIL/tree/main/web/web1)|[notion]()|
+|00|[생활코딩 - WEB1](https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb)|[완료](https://github.com/hermin9804/TIL/tree/main/web/web1)|[notion]()|
 
 App
 |Order|------- What I Learning -------|Status|Details|
