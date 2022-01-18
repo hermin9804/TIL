@@ -5,32 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web1 - HTMl</title>
+    <script>
+        function nightDayHandler(self){
+            let target = document.querySelector('body')
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+
+                let alist = document.querySelectorAll('a');
+                let i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+
+                let alist = document.querySelectorAll('a');
+                let i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'blue';
+                    i++;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <input id="night_day" type="button" value="night" onclick="
-        let target = document.querySelector('body')
-        if (this.value === 'night') {
-            let alist = document.querySelectorAll('a')
-            let i = 0
-            while (i < alist.length) {
-                alist[i].style.color = 'powderblue'
-                i++
-            }
-            target.style.backgroundColor = 'black'
-            target.style.color = 'white'
-            this.value = 'day'
-        } else {
-            let alist = document.querySelectorAll('a')
-            let i = 0
-            while (i < alist.length) {
-                alist[i].style.color = 'blue'
-                i++
-            }
-            target.style.backgroundColor = 'white'
-            target.style.color = 'black'
-            this.value = 'night'
-        }
+        nightDayHandler(this);
     ">
     <ol>
         <li><a href="1.html">HTML</a></li>
