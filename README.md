@@ -1,26 +1,25 @@
 # TIL
 
-CS
+## CS
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
 |00|[Tucker : 컴맹을위한 go언어 (1 ~ 6)](https://www.youtube.com/watch?v=Tq3W8UyltFs&list=PLy-g2fnSzUTAaDcLW7hpq0e8Jlt7Zfgd6)|진행중|[notion]()|
 |01|[반효경 : 운영체제 (책 + 강의)](http://www.kocw.net/home/cview.do?cid=3646706b4347ef09)|예정|[notion]()|
 |02|[김주균 : OS Oh Yes (책)](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788993712476)|예정|[notion]()|
 
-
-Language
+## Language
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
 |00|[모두의 코드 : 씹어먹는 c++ 강좌](https://modoocode.com/134)|잠깐중단|[github](https://github.com/hermin9804/TIL/tree/main/cpp/modoocode_%EC%94%B9%EC%96%B4%EB%A8%B9%EB%8A%94c%2B%2B)|
 
-Web
+## Web
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
 |00|[생활코딩 : WEB1 - HTML](https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web1-HTML)|
 |01|[생활코딩 : WEB2 - CSS](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-CSS)|
 |03|[생활코딩 : WEB2 - JavaScript](https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-JavaScript)|
 
-App
+##App
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
 |00|[더코딩파파 : dart 문법](https://www.youtube.com/watch?v=ZkYge2v61wU&t=14s)|잠깐중단|[github](https://github.com/hermin9804/TIL/tree/main/dart)|
