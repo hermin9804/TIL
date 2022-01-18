@@ -8,13 +8,16 @@
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="
-        if (document.querySelector('body').style.backgroundColor === 'black') {
-            document.querySelector('body').style.backgroundColor = 'white'
-            document.querySelector('body').style.color = 'black'
+    <input id="night_day" type="button" value="night" onclick="
+        let target = document.querySelector('body')
+        if (this.value === 'night') {
+            target.style.backgroundColor = 'black'
+            target.style.color = 'white'
+            this.value = 'day'
         } else {
-            document.querySelector('body').style.backgroundColor = 'black'
-            document.querySelector('body').style.color = 'white'
+            target.style.backgroundColor = 'white'
+            target.style.color = 'black'
+            this.value = 'night'
         }
     ">
     <ol>
@@ -26,5 +29,17 @@
     <p>
         this is JavaScript page
     </p>
+    <input id="night_day" type="button" value="night" onclick="
+        let target = document.querySelector('body')
+        if (this.value === 'night') {
+            target.style.backgroundColor = 'black'
+            target.style.color = 'white'
+            this.value = 'day'
+        } else {
+            target.style.backgroundColor = 'white'
+            target.style.color = 'black'
+            this.value = 'night'
+        }
+    ">
 </body>
 </html>
