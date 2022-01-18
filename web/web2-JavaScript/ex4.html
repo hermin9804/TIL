@@ -27,5 +27,14 @@
             document.write(key+' : '+cowoerkers[key]+"<br>");
         }
     </script>
+    <h2>Property & Method</h2>
+    <script>
+        cowoerkers.showAll = function() {
+            for (let key in this) {
+                document.write(key+' : '+this[key]+"<br>");
+            }
+        }
+        cowoerkers.showAll();
+    </script>
 </body>
 </html>
