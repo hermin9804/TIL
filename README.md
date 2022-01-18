@@ -18,7 +18,7 @@ Web
 |:---:|:---|:---:|:---:|
 |00|[생활코딩 : WEB1 - HTML](https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web1-HTML)|
 |01|[생활코딩 : WEB2 - CSS](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-CSS)|
-|03|[생활코딩 : WEB2 - JavaScript](https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf)|진행중|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-JavaScript)|
+|03|[생활코딩 : WEB2 - JavaScript](https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-JavaScript)|
 
 App
 |Order|------- What I Learning -------|Status|Details|
