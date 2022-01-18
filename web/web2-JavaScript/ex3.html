@@ -6,30 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web1 - HTMl</title>
     <script>
-        function nightDayHandler(self){
+        function linkSetColor(color) {
+            let alist = document.querySelectorAll('a');
+            let i = 0;
+            while (i < alist.length) {
+                alist[i].style.color = color;
+                i++;
+            }
+        }
+        function bodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+        function bodySetBackgroundColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function nightDayHandler(self) {
             let target = document.querySelector('body')
             if (self.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
+                bodySetBackgroundColor('black')
+                bodySetColor('white');
                 self.value = 'day';
 
-                let alist = document.querySelectorAll('a');
-                let i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i++;
-                }
+                linkSetColor('powderblue');
             } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
+                bodySetBackgroundColor('white')
+                bodySetColor('black');
                 self.value = 'night';
 
-                let alist = document.querySelectorAll('a');
-                let i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    i++;
-                }
+                linkSetColor('blue');
             }
         }
     </script>
