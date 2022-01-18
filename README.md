@@ -19,7 +19,7 @@
 |01|[생활코딩 : WEB2 - CSS](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-CSS)|
 |03|[생활코딩 : WEB2 - JavaScript](https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-JavaScript)|
 
-##App
+## App
 |Order|------- What I Learning -------|Status|Details|
 |:---:|:---|:---:|:---:|
 |00|[더코딩파파 : dart 문법](https://www.youtube.com/watch?v=ZkYge2v61wU&t=14s)|잠깐중단|[github](https://github.com/hermin9804/TIL/tree/main/dart)|
