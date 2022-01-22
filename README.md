@@ -19,6 +19,8 @@
 |01|[생활코딩 : WEB2 - CSS](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-CSS)|
 |03|[생활코딩 : WEB2 - JavaScript](https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/web2-JavaScript)|
 |04|[udemy : react 완벽가이드 요약집](https://www.udemy.com/course/best-react/)|완료|[github](https://github.com/hermin9804/TIL/tree/main/web/react)|
+|05|[udemy : react + TypeScript](https://www.udemy.com/course/best-react/)|진행중|[github](https://github.com/hermin9804/TIL/tree/main/web/react/learning-typescript)|
+
 
 ## App
 |Order|------- What I Learning -------|Status|Details|
