@@ -1,10 +1,12 @@
 import AddNumber from "./AddNumber";
 
-const AddNumberRoot = () => {
+const AddNumberRoot: React.FC<{ addNumber: (num: number) => void }> = (
+  props
+) => {
   return (
     <div>
       <h1>Add Number Root</h1>
-      <AddNumber></AddNumber>
+      <AddNumber addNumber={props.addNumber}></AddNumber>
     </div>
   );
 };

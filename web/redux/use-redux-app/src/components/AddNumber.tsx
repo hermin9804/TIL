@@ -1,9 +1,23 @@
-const AddNumber = () => {
+import React, { useRef } from "react";
+
+const AddNumber: React.FC<{ addNumber: (num: number) => void }> = (props) => {
+  const numberInputRef = useRef<HTMLInputElement>(null);
+
+  const submitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const enterdNumber = numberInputRef.current!.value;
+
+    props.addNumber(Number(enterdNumber));
+  };
+
   return (
     <div>
-      <h1>Add Number</h1>
-      <input type="button" value="+"></input>
-      <input type="text" value="0"></input>
+      <form onSubmit={submitHandler}>
+        <h1>Add Number</h1>
+        <button type="submit">+</button>
+        <input type="text" id="text" ref={numberInputRef}></input>
+      </form>
     </div>
   );
 };
