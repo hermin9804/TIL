@@ -21,8 +21,8 @@ const SubContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 10%;
+  padding-right: 10%;
 `;
 
 const MainPage = () => {
@@ -33,7 +33,7 @@ const MainPage = () => {
           <OrderSelect />
           <TermSelect />
           <Typography variant="h6" component="div" sx={{ m: 4 }}>
-            subscribe
+            subscribed
             <Checkbox />
           </Typography>
           <Typography variant="h6" component="div" sx={{ m: 4 }}>
@@ -42,7 +42,7 @@ const MainPage = () => {
           </Typography>
         </SubContainer>
         <ContentsContainer>
-          <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+          <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
             <ContentCard />
             <ContentCard />
             <ContentCard />

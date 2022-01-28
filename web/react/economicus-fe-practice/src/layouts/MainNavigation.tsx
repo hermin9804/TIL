@@ -17,60 +17,62 @@ const EconomicusLogo = styled("img")({
 
 const MainNavigation = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="inherit">
-        <Toolbar>
-          <Link to="/">
-            <EconomicusLogo src="https://avatars.githubusercontent.com/u/98199739?s=200&v=4" />
-          </Link>
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="h5">Economicus</Typography>
-          </Box>
-          <SearchTextField />
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="home"
-            sx={{ mr: 1, ml: 1 }}
-            href="/"
-          >
-            <Home />
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="home"
-            sx={{ mr: 1, ml: 1 }}
-            href="/"
-          >
-            <People />
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="home"
-            sx={{ mr: 1, ml: 1 }}
-            href="/"
-          >
-            <ChatBubble />
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="home"
-            sx={{ mr: 1, ml: 1 }}
-            href="/"
-          >
-            <Notifications />
-          </IconButton>
-          <PositionedMenu />
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <nav>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" color="inherit">
+          <Toolbar>
+            <Link to="/">
+              <EconomicusLogo src="https://avatars.githubusercontent.com/u/98199739?s=200&v=4" />
+            </Link>
+            <Box sx={{ flexGrow: 1 }}>
+              <Typography variant="h5">Economicus</Typography>
+            </Box>
+            <SearchTextField />
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="home"
+              sx={{ mr: 1, ml: 1 }}
+              href="/"
+            >
+              <Home />
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="home"
+              sx={{ mr: 1, ml: 1 }}
+              href="/"
+            >
+              <People />
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="home"
+              sx={{ mr: 1, ml: 1 }}
+              href="/"
+            >
+              <ChatBubble />
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="home"
+              sx={{ mr: 1, ml: 1 }}
+              href="/"
+            >
+              <Notifications />
+            </IconButton>
+            <PositionedMenu />
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </nav>
   );
 };
 
