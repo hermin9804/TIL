@@ -23,6 +23,7 @@ const PositionedMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        color="inherit"
       >
         <AccountCircle />
       </Button>
@@ -42,15 +43,35 @@ const PositionedMenu = () => {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to={"/PersonalProfilePage"}>Profile</Link>
+          <Link
+            to={"/PersonalProfilePage"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            Profile
+          </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to={"/QuantLabPage"}>Quant Lab</Link>
+          <Link
+            to={"/QuantLabPage"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            Quant Lab
+          </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to={"/MyAccountPage"}>My Account</Link>
+          <Link
+            to={"/SettingsPage"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            Settings
+          </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          Logout
+        </MenuItem>
       </Menu>
     </div>
   );
