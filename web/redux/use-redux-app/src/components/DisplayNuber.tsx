@@ -1,8 +1,14 @@
-const DisplayNumber: React.FC<{ numValue: number }> = (props) => {
+import { useSelector } from "react-redux";
+
+const DisplayNumber = () => {
+  const counter = useSelector();
+
   return (
     <div>
       <h1>Display Number</h1>
-      <input type="text" value={props.numValue} readOnly></input>
+      <input type="text" readOnly>
+        {counter}
+      </input>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const AddNumber: React.FC<{ addNumber: (num: number) => void }> = (props) => {
+const AddNumber = () => {
   const numberInputRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = (event: React.FormEvent) => {
@@ -8,7 +8,7 @@ const AddNumber: React.FC<{ addNumber: (num: number) => void }> = (props) => {
 
     const enterdNumber = numberInputRef.current!.value;
 
-    props.addNumber(Number(enterdNumber));
+    //props.addNumber(Number(enterdNumber));
   };
 
   return (
