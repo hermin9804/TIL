@@ -1,32 +1,10 @@
-import { createStore } from "redux";
+import { combineReducers } from "redux";
+import counter from "./counter";
 
-const INCREASE_BY = "counter/INCREASE_BY" as const;
-
-export const increaseBy = (diff: number) => ({
-  type: INCREASE_BY,
-  payload: diff,
+const rootReducer = combineReducers({
+  counter,
 });
 
-type CounterAction = ReturnType<typeof increaseBy>;
+export default rootReducer;
 
-type CounterState = {
-  count: number;
-};
-
-const initialState: CounterState = {
-  count: 0,
-};
-
-const counterReducer = (
-  state: CounterState = initialState,
-  action: CounterAction
-): CounterState => {
-  if (action.type === INCREASE_BY) {
-    return { count: state.count + action.payload };
-  }
-  return state;
-};
-
-const store = createStore(counterReducer);
-
-export default store;
+export type RootState = ReturnType<typeof rootReducer>;
