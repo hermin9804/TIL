@@ -13,8 +13,8 @@ export default function OrderSelect() {
   };
 
   return (
-    <Box sx={{ minWidth: 120, m: 4 }}>
-      <FormControl fullWidth>
+    <Box sx={{ minWidth: 120, ml: 2, mr: 2 }}>
+      <FormControl fullWidth variant="standard">
         <InputLabel id="demo-simple-select-label">list order</InputLabel>
         <Select
           labelId="demo-simple-select-label"

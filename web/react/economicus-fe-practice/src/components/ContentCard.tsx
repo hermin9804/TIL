@@ -7,10 +7,10 @@ import Typography from "@mui/material/Typography";
 
 export default function ContentCard() {
   return (
-    <Card sx={{ maxWidth: 800, maxHeight: 700, m: 4 }}>
+    <Card sx={{ maxWidth: 345, m: 2 }}>
       <CardMedia
         component="img"
-        height="400"
+        height="140"
         image="https://avatars.githubusercontent.com/u/98199739?s=200&v=4"
         alt="green iguana"
       />

@@ -9,59 +9,64 @@ import TermSelect from "../components/TermSelct";
 const ContentsContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
-const SubContainer = styled.div`
+const SubNavigation = styled.div`
   width: 100%;
-  height: 110px;
+  height: 80px;
   display: flex;
+  align-items: center;
 `;
 
 const MainContainer = styled.div`
   padding-left: 10%;
   padding-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const MainPage = () => {
   return (
     <div>
       <MainContainer>
-        <SubContainer>
-          <OrderSelect />
-          <TermSelect />
-          <Typography variant="h6" component="div" sx={{ m: 4 }}>
-            subscribed
-            <Checkbox />
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ m: 4 }}>
-            테스트 포함
-            <Checkbox />
-          </Typography>
-        </SubContainer>
-        <ContentsContainer>
-          <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-            <ContentCard />
-          </Box>
-        </ContentsContainer>
+        <div>
+          <SubNavigation>
+            <OrderSelect />
+            <TermSelect />
+            <Typography component="div" sx={{ ml: 2, mr: 2 }}>
+              subscribed
+              <Checkbox size="small" />
+            </Typography>
+            <Typography component="div" sx={{ ml: 2, mr: 2 }}>
+              테스트 포함
+              <Checkbox size="small" />
+            </Typography>
+          </SubNavigation>
+          <ContentsContainer>
+            <Box
+              sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}
+            >
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+              <ContentCard />
+            </Box>
+          </ContentsContainer>
+        </div>
       </MainContainer>
     </div>
   );

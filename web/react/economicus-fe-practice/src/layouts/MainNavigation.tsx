@@ -33,7 +33,11 @@ const MainNavigation = () => {
               edge="start"
               color="inherit"
               aria-label="home"
-              sx={{ mr: 1, ml: 1 }}
+              sx={{
+                mr: 1,
+                ml: 1,
+                "&:hover": { backgroundColor: "transparent" },
+              }}
               href="/"
             >
               <Home />
@@ -42,8 +46,12 @@ const MainNavigation = () => {
               size="large"
               edge="start"
               color="inherit"
-              aria-label="home"
-              sx={{ mr: 1, ml: 1 }}
+              aria-label="people"
+              sx={{
+                mr: 1,
+                ml: 1,
+                "&:hover": { backgroundColor: "transparent" },
+              }}
               href="/"
             >
               <People />
@@ -52,8 +60,12 @@ const MainNavigation = () => {
               size="large"
               edge="start"
               color="inherit"
-              aria-label="home"
-              sx={{ mr: 1, ml: 1 }}
+              aria-label="chatBubble"
+              sx={{
+                mr: 1,
+                ml: 1,
+                "&:hover": { backgroundColor: "transparent" },
+              }}
               href="/"
             >
               <ChatBubble />
@@ -62,8 +74,12 @@ const MainNavigation = () => {
               size="large"
               edge="start"
               color="inherit"
-              aria-label="home"
-              sx={{ mr: 1, ml: 1 }}
+              aria-label="notifications"
+              sx={{
+                mr: 1,
+                ml: 1,
+                "&:hover": { backgroundColor: "transparent" },
+              }}
               href="/"
             >
               <Notifications />

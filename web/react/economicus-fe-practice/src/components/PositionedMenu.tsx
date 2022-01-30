@@ -24,6 +24,11 @@ const PositionedMenu = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         color="inherit"
+        sx={{
+          mr: 1,
+          ml: 1,
+          "&:hover": { backgroundColor: "transparent" },
+        }}
       >
         <AccountCircle />
       </Button>
