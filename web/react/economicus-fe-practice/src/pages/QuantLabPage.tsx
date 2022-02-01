@@ -56,8 +56,10 @@ const QuantLabPage = () => {
       <MakeModelContainer>
         <GraphContainer>
           <GraphSlectContainer>
-            <ComparativeStockSelect />
-            <TermSelect />
+            <div>
+              <ComparativeStockSelect />
+              <TermSelect />
+            </div>
           </GraphSlectContainer>
           <Graph>GGGGG</Graph>
         </GraphContainer>
