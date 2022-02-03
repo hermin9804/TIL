@@ -13,6 +13,7 @@ const RebalancingTermSlider = () => {
         marks
         min={1}
         max={12}
+        size="small"
       />
     </Box>
   );

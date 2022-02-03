@@ -13,6 +13,7 @@ const NumberOfStocks = () => {
         marks
         min={1}
         max={50}
+        size="small"
       />
     </Box>
   );
