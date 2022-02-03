@@ -3,8 +3,8 @@ import { Box } from "@mui/system";
 import styled from "styled-components";
 
 import ContentCard from "../components/ContentCard";
-import OrderSelect from "../components/OrderSelct";
-import TermSelect from "../components/TermSelct";
+import OrderSelect from "../components/selecter/OrderSelect";
+import TermSelect from "../components/selecter/TermSelect";
 
 const ContentsContainer = styled.div`
   width: 100%;
