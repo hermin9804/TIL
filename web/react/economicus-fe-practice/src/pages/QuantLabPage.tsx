@@ -9,7 +9,7 @@ import NumberOfStocks from "../components/slider/NumberOfStocksSlider";
 import RebalancingTermSlider from "../components/slider/RebalancingTermSlider";
 
 const MainContainer = styled.div`
-  // border: 3px solid pink;
+  //border: 3px solid pink;
   margin: 5px;
   padding-left: 10%;
   padding-right: 10%;
@@ -17,7 +17,7 @@ const MainContainer = styled.div`
 `;
 
 const GraphContainer = styled(Card)`
-  // border: 3px solid blue;
+  //border: 3px solid blue;
   margin: 5px;
   width: 50%;
 `;
@@ -37,7 +37,6 @@ const Graph = styled.div`
 const MakeModelContainer = styled.div`
   //border: 3px solid black;
   argin: 5px;
-  width: 100%;
   display: flex;
 `;
 
@@ -50,7 +49,6 @@ const ModelContainer = styled(Card)`
 const ShowQuantModelYieldContainer = styled(Card)`
   //border: 3px solid yellow;
   margin: 5px;
-  width: 100%;
   margin-top: 10px;
 `;
 
