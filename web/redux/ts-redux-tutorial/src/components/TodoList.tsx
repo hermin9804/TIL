@@ -8,7 +8,7 @@ type TodoListProps = {
 };
 
 function TodoList({ todos, onToggle, onRemove }: TodoListProps) {
-  if (todos.length === 0) return <p>등록뙨 항목에 없습니다.</p>;
+  if (todos.length === 0) return <p>등록된 항목에 없습니다.</p>;
   return (
     <ul>
       {todos.map((todo) => (
