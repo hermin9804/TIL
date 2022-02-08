@@ -1,8 +1,10 @@
 import { Card, Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { useState } from "react";
 import styled from "styled-components";
 
 import Example from "../components/graph";
+import ModalBusinessAreas from "../components/modals/BusinessAreas";
 import ComparativeStockSelect from "../components/selecter/ComparativeStockSelect";
 import TermSelect from "../components/selecter/TermSelect";
 import NumberOfStocks from "../components/slider/NumberOfStocksSlider";
@@ -52,7 +54,22 @@ const ShowQuantModelYieldContainer = styled(Card)`
   margin-top: 10px;
 `;
 
+export interface IBusinessArea {
+  [key: string]: boolean;
+}
+
+export interface IChartInfo {
+  [key: string]: boolean;
+}
+
 const QuantLabPage = () => {
+  const [businessArea, setBusinessArea] = useState({
+    game: true,
+    enter: false,
+    enter2: false,
+    enter3: false,
+  });
+  const [chartInfo, setChartInfo] = useState({});
   return (
     <MainContainer>
       <MakeModelContainer>
@@ -79,10 +96,10 @@ const QuantLabPage = () => {
             }}
           >
             {/* 클릭시 modal 창 열리게 변경*/}
-            <Card>사업분야</Card>
-            <Card>재무상태</Card>
-            <Card>주식성향</Card>
-            <Card>차트정보</Card>
+            <ModalBusinessAreas
+              state={businessArea}
+              setState={setBusinessArea}
+            />
           </Box>
         </ModelContainer>
       </MakeModelContainer>
