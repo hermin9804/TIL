@@ -7,6 +7,7 @@ import Example from "../components/graph";
 import ModalBusinessAreas from "../components/modals/BusinessAreas";
 import ComparativeStockSelect from "../components/selecter/ComparativeStockSelect";
 import TermSelect from "../components/selecter/TermSelect";
+import LabSlider from "../components/slider/LabSlider";
 import NumberOfStocks from "../components/slider/NumberOfStocksSlider";
 import RebalancingTermSlider from "../components/slider/RebalancingTermSlider";
 
@@ -69,7 +70,8 @@ const QuantLabPage = () => {
     enter2: false,
     enter3: false,
   });
-  const [chartInfo, setChartInfo] = useState({});
+  const [rebalancingTerm, setRebalancingTerm] = useState<number | string>(1);
+  const [numberOfHoldings, setNumberOfHoldings] = useState<number | string>(1);
   return (
     <MainContainer>
       <MakeModelContainer>
@@ -85,8 +87,20 @@ const QuantLabPage = () => {
         <ModelContainer>
           <Container sx={{ px: "5%" }}>
             <h3>Quant Lab</h3>
-            <RebalancingTermSlider />
-            <NumberOfStocks />
+            <LabSlider
+              name={"리밸런싱 주기"}
+              min={1}
+              max={12}
+              value={rebalancingTerm}
+              setValue={setRebalancingTerm}
+            />
+            <LabSlider
+              name={"보유 종목 수"}
+              min={1}
+              max={50}
+              value={numberOfHoldings}
+              setValue={setNumberOfHoldings}
+            />
           </Container>
           <Box
             sx={{
