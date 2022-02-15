@@ -1,25 +1,17 @@
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-var person = {
-    name: "mher",
-    age: 25,
-    hobbies: ["sports", "Cooking"],
-    role: Role.ADMIN
-};
-//person.role.push("admin");
-//person.role[1] = 10;
-person.role;
-var favoriteActivities;
-favoriteActivities = ["Sports"];
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby);
+function combine(input1, input2, resultConbersion) {
+    var result;
+    if ((typeof input1 === "number" && typeof input2 === "number") ||
+        resultConbersion === "as-nuber") {
+        result = +input1 + +input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
-if (person.role === Role.ADMIN) {
-    console.log("is admin");
-}
+var combinedAges = combine(30, 26, "as-nuber");
+console.log(combinedAges);
+var combinedStringAges = combine("30", "26", "as-nuber");
+console.log(combinedAges);
+var combinedName = combine("Max", "Anna", "as-text");
+console.log(combinedName);
