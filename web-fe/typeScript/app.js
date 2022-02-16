@@ -10,3 +10,10 @@ combineValues = add;
 //combineValues = printResult;
 //combineValues = 5;
 console.log(combineValues(8, 8));
+function addAndHanled(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+addAndHanled(10, 20, function (result) {
+    console.log(result);
+});
