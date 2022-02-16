@@ -1,14 +1,12 @@
-let userInput: unknown;
-let userName: string;
+const hobbies = ["Sports", "Cooking"];
+const activeHobbies = ["hiking"];
 
-userInput = 5;
-userInput = "max";
-if (typeof userInput === "string") {
-  userName = userInput;
-}
+console.log(...hobbies);
 
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-}
+const person = {
+  name: "mher",
+  age: 25,
+};
 
-generateError("An error occurred!", 500);
+const copiedPerson = { ...person };
+console.log(copiedPerson.name + copiedPerson.age);
