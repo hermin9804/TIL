@@ -4,12 +4,12 @@ const activeHobbies = ["hiking"];
 console.log(...hobbies);
 
 const person = {
-  name: "mher",
+  firstName: "mher",
   age: 25,
 };
 
 const copiedPerson = { ...person };
-console.log(copiedPerson.name + copiedPerson.age);
+console.log(copiedPerson.firstName + copiedPerson.age);
 
 const add = (...numbers: number[]) => {
   return numbers.reduce((curRsult, curValue) => {
@@ -19,3 +19,11 @@ const add = (...numbers: number[]) => {
 
 const addedNumbers = add(1, 2, 3, 4, 5);
 console.log(addedNumbers);
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+
+console.log(hobbies, hobby1, hobby2);
+
+const { firstName: userName, age } = person;
+
+console.log(userName, age, person);
