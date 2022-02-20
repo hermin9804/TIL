@@ -17,17 +17,12 @@ var Department = /** @class */ (function () {
     function Department(id, name) {
         this.id = id;
         this.name = name;
-        // private readonly id: string;
-        // private name: string;
         this.employees = [];
-        // this.id = id
-        // this.name = n;
     }
     Department.prototype.describe = function () {
         console.log("Department: (".concat(this.id, "): ").concat(this.name));
     };
     Department.prototype.addEmployee = function (employee) {
-        // this.id = "d2";
         this.employees.push(employee);
     };
     Department.prototype.printEmployeeInformation = function () {
@@ -52,6 +47,12 @@ var AccountingDepartment = /** @class */ (function (_super) {
         _this.reports = reports;
         return _this;
     }
+    AccountingDepartment.prototype.addEmployee = function (name) {
+        if (name === "Max") {
+            return;
+        }
+        this.employees.push(name);
+    };
     AccountingDepartment.prototype.addReport = function (text) {
         this.reports.push(text);
     };
@@ -67,4 +68,7 @@ it.describe();
 it.printEmployeeInformation();
 var accounting = new AccountingDepartment("d2", []);
 accounting.addReport("Someting went wrong...");
+accounting.addEmployee("Max");
+accounting.addEmployee("Manu");
 accounting.printReports();
+accounting.printEmployeeInformation();
